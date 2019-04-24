@@ -1,0 +1,15 @@
+[package]
+name = "soyuz"
+version = "1.0.0"
+authors = ["Steve Korshakov <steve@openland.com>"]
+description = "Fast GraphQL client"
+publish = false
+
+[dependencies]
+
+[target.'cfg(target_os="android")'.dependencies]
+jni = { version = "0.9", default-features = false }
+
+[lib]
+name = "soyuz"
+crate-type = ["staticlib", "cdylib"]
